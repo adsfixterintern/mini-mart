@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛋️ Furniture Mini-Mart
 
-## Getting Started
+A modern, high-performance E-commerce web application for furniture, built with **Next.js 14**, **Tailwind CSS**, and **TanStack Query**.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+* **Responsive Hero Section:** Eye-catching banner with floating info cards.
+* **Dynamic Product Listing:** Fetches data from local JSON using TanStack Query with built-in caching and skeleton loaders.
+* **Detailed Product Pages:** Dynamic routing (`/products/[slug]`) to showcase full product specifications and ratings.
+* **Functional Shopping Cart:** Global state management using Context API for adding, removing, and updating quantities.
+* **Validated Checkout:** Secure checkout form with real-time validation via React Hook Form.
+* **Toast Notifications:** Instant feedback for user actions (Add to cart, Login, Order success) using React Hot Toast.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **Next.js 14** | Framework (App Router & Optimized Images) |
+| **TanStack Query** | Data fetching, caching, and state sync |
+| **Tailwind CSS** | Responsive and modern UI styling |
+| **Lucide React** | Clean and consistent iconography |
+| **React Hook Form** | Efficient form handling and validation |
+| **React Hot Toast** | Beautiful popup notifications |
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/
+│   ├── (withCommonLayout)/
+│   │   ├── products/
+│   │   │   ├── [slug]/       # Product Details Page
+│   │   │   └── page.jsx      # Product Listing Page
+│   │   ├── cart/             # Shopping Cart Page
+│   │   ├── checkout/         # Checkout Page
+│   │   └── page.jsx          # Home Page (Hero + Featured)
+│   └── layout.jsx            # Global Providers & Toaster
+├── components/
+│   ├── shared/               # Container & Global Components
+│   └── _component/           # Feature-specific components (Cards, Banner)
+├── context/
+│   └── CartContext.jsx       # Global Cart State Logic
+└── public/
+    └── products.json         # Product Database
+
+```
+## ⚙️ Installation & Setup
+
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/your-username/furniture-mini-mart.git](https://github.com/your-username/furniture-mini-mart.git)
+
+```
+### 2 Navigate to the Project Directory
+```bash
+
+cd furniture-mini-mart
+
+```
+### 3 Install Dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Using npm
+npm install @tanstack/react-query react-hook-form react-hot-toast lucide-react
+
+# OR using yarn
+# yarn add @tanstack/react-query react-hook-form react-hot-toast lucide-react
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4 Run the Development Server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm run dev
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
