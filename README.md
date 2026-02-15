@@ -59,13 +59,13 @@ Follow these steps to set up and run the project locally:
 git clone [https://github.com/your-username/furniture-mini-mart.git](https://github.com/your-username/furniture-mini-mart.git)
 
 ```
-### 2 Navigate to the Project Directory
+### 2. Navigate to the Project Directory
 ```bash
 
 cd furniture-mini-mart
 
 ```
-### 3 Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 
