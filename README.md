@@ -77,7 +77,7 @@ npm install @tanstack/react-query react-hook-form react-hot-toast lucide-react
 
 ```
 
-### 4 Run the Development Server
+### 4. Run the Development Server
 
 ```bash
 
